@@ -2,20 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.category-wrapper {
+  padding-right: 10px; /* Telefonlar uchun */
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@media (min-width: 340px) { 
+    .category-wrapper {
+      padding-right: 0px;
+    }
+  }
+@media (min-width: 640px) { 
+  .category-wrapper {
+    padding-right: 100px;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@media (min-width: 1024px) { /* Katta ekranlar (1024px dan katta) */
+  .category-wrapper {
+    padding-right: 110px;
+  }
 }
+@media (min-width: 1280px) { 
+    .category-wrapper {
+      padding-right: 250px;
+    }
+  }
+  @media (min-width: 1800px) { 
+    .category-wrapper {
+      padding-right: 400px;
+    }
+  }
+@media (min-width: 2000px) { 
+    .category-wrapper {
+      padding-right: 750px;
+    }
+  }
+  

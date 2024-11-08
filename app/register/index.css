@@ -1,0 +1,41 @@
+
+
+
+.in{
+    border: none;
+    border-bottom: 1px solid gray;
+}
+/* Global styles (adjust as needed) */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Add more styles as needed for layout and responsiveness */
+@media (max-width: 1111px) {
+    /* Adjust form and container layout on tablets */
+    .flex {
+      flex-direction: column;
+    }
+  
+    .xl\\:hidden {
+      display: none;
+    }
+  
+    .w-full {
+      width: 100%;
+    }
+  
+    .max-w-xl {
+      max-width: 100%;
+    }
+  }
+  
