@@ -107,7 +107,7 @@ export default function Home() {
     },
   ];
   return (
-    <div className="w-full h-auto flex flex-col gap-20 justify-center mt-16 sm:mt-20 px-4 w-full p-2 mt-8 sm:p-10 lg:p-16 lg:mt-4">
+    <div className="w-full h-auto flex flex-col gap-20 justify-center mt-32 sm:mt-20 px-4 p-2  sm:p-10 lg:p-16 lg:mt-32">
       <div className="w-full flex flex-col lg:flex-row items-center lg:justify-between gap-10 lg:gap-8">
         <div className="w-full lg:w-[50%] flex flex-col items-center lg:items-start gap-6 sm:gap-8 md:gap-10 text-center lg:text-left">
           <h1 className="text-[#222222] font-montserrat text-[28px] sm:text-[35px] md:text-[45px] lg:text-[60px] xl:text-[70px] font-bold leading-tight tracking-[0.05em]">

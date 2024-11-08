@@ -12,7 +12,7 @@ const Page = () => {
       {/* Form container */}
       <div className="flex flex-col justify-center w-full max-w-xl p-8 mx-auto bg-white shadow-md md:w-1/2 xl:w-1/2 2xl:ml-[200px]">
         <div className="mb-8 text-center">
-          <Image src={logo} alt="Logo" className="mx-auto w-24 h-24" />
+          <Image src={logo} alt="Logo"  className="mx-auto w-24 h-24" />
           <h2 className="mt-6 text-[#1A202C] text-[30px] font-bold">Заполните все поля</h2>
         </div>
         <form className="space-y-6">
@@ -76,7 +76,7 @@ const Page = () => {
           </button>
         </form>
         <p className="mt-4 text-center text-sm text-gray-600">
-        У Вас есть аккаунт? <a href="#" className="text-[orange] hover:underline"> Войдите</a>
+        У Вас есть аккаунт? <a href="/login" className="text-[orange] hover:underline"> Войдите</a>
         </p>
       </div>
 

@@ -12,6 +12,9 @@ const Header = () => {
   const handleClick = () => {
     window.location.href = '/login'; 
   };
+  const handleClick2 = () => {
+    window.location.href = '/register'; 
+  };
   const routes = [
     { id: 1, title: 'Биржа', link: '/' },
     { id: 2, title: 'Ворки', link: '/thieves' },
@@ -42,7 +45,7 @@ const Header = () => {
         </div>
 
         <div className="action-buttons">
-          <button className="register-btn btn01">Регистрация</button>
+          <button className="register-btn btn01" onClick={handleClick2}>Регистрация</button>
           <button className="dw-btn btn02" onClick={handleClick}>Войти</button>
           <span 
             className="menu-toggle" 

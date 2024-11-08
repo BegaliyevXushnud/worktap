@@ -8,7 +8,7 @@
   left: 0;
   align-items: center;
   position: fixed;
-  border-bottom: 3px dashed #D9D9D9;
+  border-bottom: 3px solid #D9D9D9;
   z-index: 200;
   
 }
