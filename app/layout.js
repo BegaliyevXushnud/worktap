@@ -1,6 +1,6 @@
 import localFont from "next/font/local";
 import "./globals.css";
-import Header from "./component/header";
+import Header from "./component/header.jsx";
 import Footer from "./component/footer";
 import ShowLayout from "./component/showlayout";
 
