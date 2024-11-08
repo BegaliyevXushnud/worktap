@@ -10,8 +10,8 @@ const StarRating = () => {
   };
 
   useEffect(() => {
-    // Optionally, you could fetch an initial rating from an API or use localStorage
-    setRating(4); // This is just a placeholder value for now
+    
+    setRating(4); 
   }, []);
 
   return (
