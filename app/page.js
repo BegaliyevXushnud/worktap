@@ -166,8 +166,8 @@ export default function Home() {
       <div className="w-full   flex flex-col gap-6 ">
       <h1 className="text-[24px] font-semibold  leading-[29px] tracking-[0.02em]">Актуальные ворки</h1>
       <div className="cards w-full b- grid  grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-[50px] ">
-      {cards.map((card) => (
-        <div key={card.id} className="w-[335px] h-auto bg-[white] shadow-custom-light rounded-lg p-5 flex flex-col gap-6 lg:gap-8 lg:w-[350px] 2xl:w-[480px] ">
+      {cards.map((card,index) => (
+        <div key={index} className="w-[335px] h-auto bg-[white] shadow-custom-light rounded-lg p-5 flex flex-col gap-6 lg:gap-8 lg:w-[350px] 2xl:w-[480px] ">
          <div  className="flex flex-col items-center gap-3 md:flex-row ">
               <Image src={card.imageUrl} priority alt="Card image" className="w-[120px] h-[80px] lg:w-[80px] lg:h-[50px] "/>
                 <h2 className="text-[#222222] text-[18px] font-semibold leading-[21px] lg:text-[22px]">{card.title}</h2>
@@ -193,8 +193,8 @@ export default function Home() {
       <div className="w-full   flex flex-col gap-6 ">
       <h1 className="text-[24px] font-semibold  leading-[29px] tracking-[0.02em]">Актуальные ворки</h1>
       <div className="cards w-full b- grid  grid-cols-1 md:grid-cols-2 gap-3 lg:grid-cols-3 2xl:gap-[50px] ">
-      {cardstop.map((card) => (
-        <div key={card.id} className="w-[335px] h-auto bg-[white] shadow-custom-light rounded-lg p-5 flex flex-col gap-6 lg:gap-8 lg:w-[350px] 2xl:w-[480px] ">
+      {cardstop.map((card,index) => (
+        <div key={index} className="w-[335px] h-auto bg-[white] shadow-custom-light rounded-lg p-5 flex flex-col gap-6 lg:gap-8 lg:w-[350px] 2xl:w-[480px] ">
          <div  className="flex  items-center gap-5">
               <Image src={card.personImage} alt="Card image" className="w-[130px] h-[140px] 2xl:w-[180px] 2xl:h-[160px] "/>
                <div className="flex flex-col gap-3 2xl:gap-5">
