@@ -1,25 +1,57 @@
 // pages/login.js
-import React from 'react';
+"use client";
+import React, { useState } from 'react';
 import Image from 'next/image';
 import logo from '../../public/headerlogo1.svg';
 import opa from '../../public/logingirlf.svg';
 import googleIcon1 from '../../public/google.svg';
-import "./index.css"
+import "../../css folder/login.css";
 
 const Page = () => {
+  const [loginData, setLoginData] = useState({
+    email: '',
+    password: '',
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setLoginData({
+      ...loginData,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const savedFormData = JSON.parse(localStorage.getItem('formData'));
+    if (
+      savedFormData &&
+      savedFormData.email === loginData.email &&
+      savedFormData.password === loginData.password
+    ) {
+      alert('Login successful!');
+      localStorage.setItem('Login', loginData)
+      window.location.href = '/';
+    } else {
+      alert('Incorrect email or password.');
+    }
+  };
+
   return (
     <div className="flex min-h-screen">
-      {/* Form container */}
       <div className="flex flex-col justify-center w-full max-w-xl p-8 mx-auto bg-white shadow-md md:w-1/2 xl:w-1/2 2xl:ml-[200px]">
         <div className="mb-8 text-center">
           <Image src={logo} alt="Logo" className="mx-auto w-24 h-24" />
           <h2 className="mt-6 text-[#1A202C] text-[30px] font-bold">Войдите в свой аккаунт</h2>
         </div>
-        <form className="space-y-6">
+        <form onSubmit={handleSubmit} className="space-y-6">
           <div className="flex flex-col gap-3">
             <label className="block text-[#222222] leading-[21px] text-[18px]">E-mail</label>
             <input
               type="email"
+              name="email"
+              value={loginData.email}
+              onChange={handleChange}
               placeholder="E-mail"
               className="in w-full px-3 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
             />
@@ -28,6 +60,9 @@ const Page = () => {
             <label className="block text-sm font-medium text-gray-700">Пароль</label>
             <input
               type="password"
+              name="password"
+              value={loginData.password}
+              onChange={handleChange}
               placeholder="Пароль"
               className="in w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
             />
@@ -57,15 +92,9 @@ const Page = () => {
           У Вас еще нет аккаунта? <a href="/register" className="text-[orange] hover:underline">Зарегистрируйтесь бесплатно!</a>
         </p>
       </div>
-
-      {/* Image container, hidden on screens smaller than 1280px */}
       <div className="hidden xl:flex flex-1 relative md:w-1/2">
         <div className="relative w-full h-full">
-          <Image
-            src={opa}
-            alt="Woman using laptop"
-            className="ml-[0px]"
-          />
+          <Image src={opa} alt="Woman using laptop" className="ml-[0px]" />
         </div>
       </div>
     </div>
