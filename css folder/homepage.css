@@ -1,0 +1,36 @@
+.category-wrapper {
+    padding-right: 10px; /* Telefonlar uchun */
+  }
+  @media (min-width: 340px) { 
+      .category-wrapper {
+        padding-right: 0px;
+      }
+    }
+  @media (min-width: 640px) { 
+    .category-wrapper {
+      padding-right: 100px;
+    }
+  }
+  
+  @media (min-width: 1024px) { 
+    .category-wrapper {
+      padding-right: 110px;
+    }
+  }
+  @media (min-width: 1280px) { 
+      .category-wrapper {
+        padding-right: 250px;
+      }
+    }
+    @media (min-width: 1800px) { 
+      .category-wrapper {
+        padding-right: 400px;
+      }
+    }
+  @media (min-width: 2000px) { 
+      .category-wrapper {
+        padding-right: 750px;
+       
+      }
+    }
+    

@@ -13,6 +13,7 @@ import creditcarta1 from '../public/credit-card 1.svg'
 import money from '../public/money (1) 1.svg'
 import clock from '../public/clock 1.svg'
 import StarRating from "../component/star";
+import "../css folder/homepage.css"
 export default function Home() {
   const cards = [
     {

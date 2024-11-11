@@ -23,7 +23,7 @@ const Page = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const savedFormData = JSON.parse(localStorage.getItem('formData'));
+    const savedFormData = JSON.parse(localStorage.getItem('register'));
     if (
       savedFormData &&
       savedFormData.email === loginData.email &&

@@ -30,7 +30,8 @@ const Header = () => {
   };
 
   const routes = [
-    { id: 1, title: 'Биржа', link: '/' },
+   
+    { id: 1, title: 'Биржа', link: '/birja' },
     { id: 2, title: 'Ворки', link: '/thieves' },
     { id: 3, title: 'Конкурсы', link: '/contests' },
     { id: 4, title: 'Создать ворк', link: '/create-work' },
@@ -66,8 +67,8 @@ const Header = () => {
 
         <div className="action-buttons">
           {isLoggedIn ? (
-            <>
-              <div className="flex items-center gap-10 relative">
+            
+              <div className="profile  flex items-center gap-10 relative ">
                 <div className="flex gap-5 items-center">
                   <FaStar size={19} color="#B0AAD0" />
                   <FaBell size={19} color="#B0AAD0" />
@@ -82,7 +83,7 @@ const Header = () => {
                       className="w-[60px] h-[60px] cursor-pointer"
                       onClick={toggleMenu}
                     />
-                    {isOpen && (
+                    {isOpen && ( 
                       <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg z-10">
                         <ul className="py-2">
                           {['Profile', 'Account', 'Dashboard', 'Logout'].map((item) => (
@@ -100,7 +101,7 @@ const Header = () => {
                   </div>
                 </div>
               </div>
-            </>
+            
           ) : (
             <>
               <button className="register-btn btn01" onClick={handleClick2}>Регистрация</button>
@@ -150,9 +151,48 @@ const Header = () => {
             </li>
           ))}
         </ul>
-
-        <button className="register-btn btn2">Регистрация</button>
-        <button className="dw-btn btn3">Войти</button>
+        {isLoggedIn ? (
+            <>
+              <div className="flex items-center gap-10 relative">
+                <div className="flex gap-5 items-center">
+                  <FaStar size={19} color="#B0AAD0" />
+                  <FaBell size={19} color="#B0AAD0" />
+                  <FaComment size={19} color="#B0AAD0" />
+                </div>
+                <div className="flex items-center gap-2">
+                  <h2 className="text-[#222222] text-[16px] leading-[19px] font-light">Ернар Ибрагимов</h2>
+                  <div>
+                    <Image
+                      src={profileImage}
+                      alt="Profile"
+                      className="w-[60px] h-[60px] cursor-pointer"
+                      onClick={toggleMenu}
+                    />
+                    {isOpen && ( 
+                      <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg z-10">
+                        <ul className="py-2">
+                          {['Profile', 'Account', 'Dashboard', 'Logout'].map((item) => (
+                            <li
+                              key={item}
+                              onClick={() => item === 'Logout' ? setShowLogoutModal(true) : handleClose()}
+                              className="px-4 py-2 hover:bg-gray-100 cursor-pointer text-gray-800"
+                            >
+                              {item}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </>
+          ) : (
+            <>
+              <button className="register-btn btn01" onClick={handleClick2}>Регистрация</button>
+              <button className="dw-btn btn02" onClick={handleClick}>Войти</button>
+            </>
+          )}
       </div>
 
       {/* Logout Confirmation Modal */}

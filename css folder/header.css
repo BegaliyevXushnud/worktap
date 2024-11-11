@@ -28,8 +28,8 @@
 }
 
 .img {
-  width: 195px;
-  height: 40px;
+  width: 125px;
+  height: 30px;
 }
 
 .nav-desktop {
@@ -198,14 +198,20 @@
   .nav-desktop {
     display: flex;
   }
-  
+
   .menu-toggle {
     display: none;
   }
+ 
 }
-
+.profile{
+  display: block;
+}
 @media (max-width: 724px) {
   .btn01, .btn02 {
+    display: none;
+  }
+  .profile {
     display: none;
   }
 }

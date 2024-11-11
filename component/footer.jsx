@@ -33,9 +33,9 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-[#F2F0FE] text-gray-700 p-10 w-full ">
+    <footer className="bg-[#F2F0FE] text-gray-700 p-10 w-full">
       <div className="w-[95%] mx-auto grid gap-8 grid-cols-2 md:grid-cols-3  lg:grid-cols-4 ">
-    
+        {/* Top Categories */}
         <div>
           <h3 className="text-[19px] md:text-[24px] text-[#222222] leading-[29px] font-bold mb-4">Топ категории</h3>
           <ul>
@@ -46,6 +46,8 @@ const Footer = () => {
             ))}
           </ul>
         </div>
+
+        {/* About Project */}
         <div>
           <h3 className="text-[19px] md:text-[24px] text-[#222222] leading-[29px] font-bold mb-4">О Проекте</h3>
           <ul>
