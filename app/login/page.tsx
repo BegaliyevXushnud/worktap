@@ -30,7 +30,10 @@ const Page = () => {
       savedFormData.password === loginData.password
     ) {
       alert('Login successful!');
-      localStorage.setItem('Login', loginData)
+
+      if(typeof window !== undefined){
+        localStorage.setItem('Login', JSON.stringify(loginData))
+      }
       window.location.href = '/';
     } else {
       alert('Incorrect email or password.');

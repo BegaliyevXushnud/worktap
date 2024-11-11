@@ -28,7 +28,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-, "app/create-work/page.jsx", "app/create-order/page.jsx", "app/contests/page.jsx", "component/star.jsx", "component/footer.jsx", "component/header.jsx", "app/login/page.jsx", "app/register/page.jsx", "app/thieves/page.jsx"  ],
+, "app/create-work/page.tsx", "app/create-order/page.tsx", "app/contests/page.tsx", "component/star.tsx", "component/footer.tsx", "component/header.tsx", "app/login/page.tsx", "app/register/page.tsx", "app/thieves/page.tsx"  ],
   "exclude": [
     "node_modules"
   ]

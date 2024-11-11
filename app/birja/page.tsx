@@ -63,9 +63,9 @@ const Page = () => {
           </div>
 
           {/* Down Arrow Section */}
-          <div className="flex flex-col items-center justify-center gap-6">
+          <div className="flex flex-col items-center justify-center gap-6 text-[green]">
             <h1 className="text-[24px] text-[#000000] leading-[30px]">Ниже все заказы по <span className="text-green-400">дизайну</span></h1>
-            <FaChevronDown className="text-green-500 text-3xl" />
+            <FaChevronDown size={18} />
           </div>
         </div>
       </div>
