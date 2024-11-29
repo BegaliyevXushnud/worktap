@@ -1,17 +1,17 @@
 "use client";
 import Image from 'next/image';
-import HeaderLogo from '../public/headerlogo1.svg';
+import HeaderLogo from '../../public/headerlogo1.svg';
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
-import "../css folder/header.css";
+import "../../css folder/header.css";
 import { FaBars, FaTimes, FaStar, FaBell, FaComment } from 'react-icons/fa';
-import profileImage from '../public/bro.svg';
+import profileImage from '../../public/bro.svg';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [isOpen, setIsOpen] = useState(false); // State for dropdown menu
-  const [showLogoutModal, setShowLogoutModal] = useState(false); // State for logout modal
+  const [isOpen, setIsOpen] = useState(false); 
+  const [showLogoutModal, setShowLogoutModal] = useState(false); 
 
   const handleClick = () => {
     window.location.href = '/login'; 
@@ -22,11 +22,11 @@ const Header = () => {
   };
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen); // Toggle dropdown menu
+    setIsOpen(!isOpen); 
   };
   
   const handleClose = () => {
-    setIsOpen(false); // Close dropdown menu
+    setIsOpen(false); 
   };
 
   const routes = [
@@ -70,7 +70,7 @@ const Header = () => {
         <div className="action-buttons">
           {isLoggedIn ? (
             
-              <div className="profile  flex items-center gap-10 relative ">
+              <div className=" flex items-center gap-10 relative ">
                 <div className="flex gap-5 items-center">
                   <FaStar size={19} color="#B0AAD0" />
                   <FaBell size={19} color="#B0AAD0" />

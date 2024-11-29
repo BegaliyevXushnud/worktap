@@ -19,7 +19,7 @@ const Page = () => {
     isCustomer: false
   });
 
-  const handleChange = (e) => {
+  const handleChange = (e:any) => {
     const { name, value, type, checked } = e.target;
     setFormData({
       ...formData,
@@ -28,7 +28,7 @@ const Page = () => {
   };
 
  
-  const handleSubmit = (e) => {
+  const handleSubmit = (e:any) => {
     e.preventDefault();
     localStorage.setItem('register', JSON.stringify(formData));
     alert('Ma\'lumotlar saqlandi!');

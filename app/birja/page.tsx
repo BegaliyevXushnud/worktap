@@ -3,7 +3,7 @@ import { FaChevronDown } from 'react-icons/fa';
 import "../../css folder/birja.css"; // Sizning CSS faylingiz
 import birjapersonimage from "../../public/birjaperson.png"; 
 import Image from 'next/image';
-import StarRating from '../../component/star';
+import StarRating from '../component/star';
 
 const Page = () => {
   const projects = [

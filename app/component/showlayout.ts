@@ -2,7 +2,7 @@
 
 import { usePathname } from "next/navigation";
 
-export default function ShowLayout({ children }) {
+export default function ShowLayout({ children }:any) {
   const pathname = usePathname();
   const isLoginPage = pathname === "/login" ;
   const isRegisterPage = pathname === "/register" ;

@@ -1,4 +1,4 @@
-// pages/login.js
+// pages/login.tsx
 "use client";
 import React, { useState } from 'react';
 import Image from 'next/image';
@@ -7,13 +7,19 @@ import opa from '../../public/logingirlf.svg';
 import googleIcon1 from '../../public/google.svg';
 import "../../css folder/login.css";
 
+// LoginData tipi
+interface LoginData {
+  email: string;
+  password: string;
+}
+
 const Page = () => {
-  const [loginData, setLoginData] = useState({
+  const [loginData, setLoginData] = useState<LoginData>({
     email: '',
     password: '',
   });
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setLoginData({
       ...loginData,
@@ -21,18 +27,22 @@ const Page = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const savedFormData = JSON.parse(localStorage.getItem('register'));
+
+    // localStorage'dan ma'lumotni olish
+    const savedFormData = localStorage.getItem('register');
+    const savedData: LoginData | null = savedFormData ? JSON.parse(savedFormData) : null;
+
     if (
-      savedFormData &&
-      savedFormData.email === loginData.email &&
-      savedFormData.password === loginData.password
+      savedData &&
+      savedData.email === loginData.email &&
+      savedData.password === loginData.password
     ) {
       alert('Login successful!');
 
-      if(typeof window !== undefined){
-        localStorage.setItem('Login', JSON.stringify(loginData))
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('Login', JSON.stringify(loginData));
       }
       window.location.href = '/';
     } else {

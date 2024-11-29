@@ -7,7 +7,6 @@ body {
   }
   
   .shadowdiv{
-   
     box-shadow:  25px 25px 53px #e3e3e3,
              -25px -25px 53px #ffffff;
   }

@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 const StarRating = () => {
   const [rating, setRating] = useState(0);
 
-  const handleRating = (value) => {
+  const handleRating = (value:any) => {
     setRating(value);
   };
 
